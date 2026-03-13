@@ -1,0 +1,135 @@
+@{
+    ViewData["Title"] = "Início";
+    var hotel = ViewBag.Hotel as DonaMarleneMVC.Models.HotelInfo;
+    var quartos = ViewBag.Quartos as List<DonaMarleneMVC.Models.Quarto>;
+}
+
+<!-- HERO SECTION -->
+<section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <img src="/images/hotel_hero.webp" alt="Dona Marlene Hotel" class="hero-bg" />
+    <div class="hero-content">
+        <span class="hero-badge">✦ Codajás, Amazonas</span>
+        <h1 class="hero-title">Dona Marlene<br><span class="hero-highlight">Hotel</span></h1>
+        <p class="hero-subtitle">@hotel?.Slogan</p>
+        <div class="hero-ctas">
+            <a href="/Home/Galeria" class="btn btn-primary">Conheça o Hotel</a>
+            <a href="https://wa.me/5597991512365?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+Dona+Marlene+Hotel."
+               target="_blank" class="btn btn-whatsapp" id="heroWhatsappBtn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Fale pelo WhatsApp
+            </a>
+        </div>
+    </div>
+    <div class="hero-scroll-hint">
+        <span>Role para baixo</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS SECTION -->
+<section class="section diferenciais" id="diferenciais">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Por que nos escolher?</span>
+            <h2>A Experiência Dona Marlene</h2>
+            <p>Oferecemos muito mais do que hospedagem — proporcionamos memórias inesquecíveis no coração da Amazônia.</p>
+        </div>
+        <div class="diferenciais-grid">
+            <div class="diferencial-card fade-in">
+                <div class="diferencial-icon">🌙</div>
+                <h3>Sossego de Verdade</h3>
+                <p>Longe do estresse do dia a dia, aqui você descansa de verdade. Ambiente tranquilo, silencioso e perfeito para recarregar as energias.</p>
+            </div>
+            <div class="diferencial-card fade-in">
+                <div class="diferencial-icon">🤝</div>
+                <h3>Atendimento Familiar</h3>
+                <p>Tratamos cada hóspede como parte da família. Nossa hospitalidade é nossa maior virtude.</p>
+            </div>
+            <div class="diferencial-card fade-in">
+                <div class="diferencial-icon">❄️</div>
+                <h3>Conforto Completo</h3>
+                <p>Quartos climatizados, Wi-Fi, TV a cabo, frigobar e garagem para motos — tudo que você precisa para uma estadia tranquila e confortável.</p>
+            </div>
+            <div class="diferencial-card fade-in">
+                <div class="diferencial-icon">📍</div>
+                <h3>Localização Central</h3>
+                <p>Em frente ao porto no coração de Codajás, com fácil acesso ao comércio, restaurantes da cidade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUARTOS SECTION -->
+<section class="section quartos-section" id="quartos">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Acomodações</span>
+            <h2>Nossos Quartos</h2>
+            <p>Espaços pensados para o seu descanso e conforto, com estrutura completa para sua estadia.</p>
+        </div>
+        <div class="quartos-grid">
+            @if (quartos != null)
+            {
+                @foreach (var quarto in quartos)
+                {
+                    <div class="quarto-card fade-in">
+                        <div class="quarto-img-wrapper">
+                            <img src="@quarto.Imagem" alt="@quarto.Nome" loading="lazy" />
+                            <span class="quarto-badge">👥 @quarto.Capacidade pessoa@(quarto.Capacidade > 1 ? "s" : "")</span>
+                        </div>
+                        <div class="quarto-info">
+                            <h3>@quarto.Nome</h3>
+                            <p>@quarto.Descricao</p>
+                            <ul class="comodidades">
+                                @foreach (var item in quarto.Comodidades)
+                                {
+                                    <li>✓ @item</li>
+                                }
+                            </ul>
+                            <a href="https://wa.me/5597991512365?text=Ol%C3%A1%21+Tenho+interesse+no+@Uri.EscapeDataString(quarto.Nome)."
+                               target="_blank" class="btn btn-outline">Reservar via WhatsApp</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA PREVIEW SECTION -->
+<section class="section galeria-preview">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Galeria</span>
+            <h2>Conheça Nossa Estrutura</h2>
+        </div>
+        <div class="galeria-preview-grid fade-in">
+            <img src="/images/corredor1.webp" alt="Corredor" class="galeria-preview-img large" />
+            <img src="/images/GaragemMotos1.webp" alt="Garagem de Motos" class="galeria-preview-img" />
+            <img src="/images/Frente.webp" alt="Frente do Hotel" class="galeria-preview-img" />
+        </div>
+        <div class="text-center fade-in">
+            <a href="/Home/Galeria" class="btn btn-primary">Ver Galeria Completa</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section cta-section">
+    <div class="container">
+        <div class="cta-box fade-in">
+            <h2>Pronto para visitar Codajás?</h2>
+            <p>Entre em contato agora mesmo e garanta a sua estadia no Dona Marlene Hotel!</p>
+            <a href="https://wa.me/5597991512365?text=Ol%C3%A1%21+Gostaria+de+fazer+uma+reserva+no+Dona+Marlene+Hotel."
+               target="_blank" class="btn btn-whatsapp btn-lg" id="ctaWhatsappBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Chamar no WhatsApp
+            </a>
+        </div>
+    </div>
+</section>

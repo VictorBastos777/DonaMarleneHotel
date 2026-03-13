@@ -1,0 +1,53 @@
+## .NET / ASP.NET MVC .gitignore
+
+# Build results
+bin/
+obj/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish output
+publish/
+PublishProfiles/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ASP.NET
+wwwroot/lib/
+
+# Logs
+*.log
+logs/
+
+# Secrets
+appsettings.Development.json
+*.pfx
+*.p12

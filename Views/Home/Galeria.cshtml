@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Galeria";
+    var galeria = ViewBag.Galeria as List<DonaMarleneMVC.Models.GaleriaItem>;
+    var categorias = galeria?.Select(g => g.Categoria).Distinct().ToList();
+}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="page-header-overlay"></div>
+    <img src="/images/hotel_outdoor.png" alt="Galeria" class="page-header-bg" />
+    <div class="page-header-content">
+        <span class="hero-badge">✦ Imagens</span>
+        <h1>Nossa <span class="hero-highlight">Galeria</span></h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <!-- FILTROS -->
+        <div class="galeria-filtros fade-in">
+            <button class="filtro-btn active" data-filter="all" id="filtroTodos">Todos</button>
+            @if (categorias != null)
+            {
+                @foreach (var cat in categorias)
+                {
+                    <button class="filtro-btn" data-filter="@cat" id="filtro@(cat.Replace(" ", "").Replace("ó","o").Replace("é","e").Replace("á","a"))">@cat</button>
+                }
+            }
+        </div>
+
+        <!-- GRID -->
+        <div class="galeria-grid fade-in" id="galeriaGrid">
+            @if (galeria != null)
+            {
+                @foreach (var item in galeria)
+                {
+                    <div class="galeria-item" data-categoria="@item.Categoria">
+                        <img src="@item.Imagem" alt="@item.Titulo" loading="lazy" />
+                        <div class="galeria-item-overlay">
+                            <span>@item.Titulo</span>
+                            <small>@item.Categoria</small>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
