@@ -659,6 +659,7 @@ ul { list-style: none; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     transition: transform 0.4s ease;
 }
 
@@ -691,6 +692,66 @@ ul { list-style: none; }
 }
 
 .galeria-item.hidden { display: none; }
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.93);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-overlay.active { display: flex; }
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.lightbox-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+}
+.lightbox-caption { text-align: center; color: white; }
+.lightbox-caption span { display: block; font-size: 1rem; font-weight: 600; }
+.lightbox-caption small { color: rgba(255,255,255,0.6); font-size: 0.82rem; }
+
+.lightbox-close {
+    position: fixed;
+    top: 20px; right: 28px;
+    background: none; border: none;
+    color: white; font-size: 2rem;
+    cursor: pointer; opacity: 0.8;
+    z-index: 10000; line-height: 1;
+}
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-nav {
+    position: fixed;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    border: none; color: white;
+    font-size: 2rem; width: 52px; height: 52px;
+    border-radius: 50%; cursor: pointer;
+    z-index: 10000; display: flex;
+    align-items: center; justify-content: center;
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.galeria-item { cursor: zoom-in; }
 
 /* ============================================================
    CTA SECTION

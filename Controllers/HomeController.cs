@@ -72,12 +72,22 @@ namespace DonaMarleneMVC.Controllers
         {
             return new List<GaleriaItem>
             {
-                new GaleriaItem { Id = 1, Titulo = "Fachada do Hotel", Imagem = "/images/hotel_hero.png", Categoria = "Ambiente" },
-                new GaleriaItem { Id = 2, Titulo = "Recepção", Imagem = "/images/hotel_lobby.png", Categoria = "Áreas Comuns" },
-                new GaleriaItem { Id = 3, Titulo = "Área de Lazer", Imagem = "/images/hotel_outdoor.png", Categoria = "Áreas Comuns" },
-                new GaleriaItem { Id = 4, Titulo = "Quarto Confortável", Imagem = "/images/hotel_room.png", Categoria = "Quartos" },
-                new GaleriaItem { Id = 5, Titulo = "Vista Amazônica", Imagem = "/images/hotel_hero.png", Categoria = "Ambiente" },
-                new GaleriaItem { Id = 6, Titulo = "Área de Descanso", Imagem = "/images/hotel_outdoor.png", Categoria = "Áreas Comuns" },
+                // Ambiente
+                new GaleriaItem { Id = 1, Titulo = "Fim de Tarde em Codajás", Imagem = "/images/Por do sol.webp", Categoria = "Ambiente" },
+                new GaleriaItem { Id = 2, Titulo = "Fachada do Hotel Dona Marlene", Imagem = "/images/hotel_hero.webp", Categoria = "Ambiente" },
+                new GaleriaItem { Id = 3, Titulo = "Entrada Principal", Imagem = "/images/Frente.webp", Categoria = "Ambiente" },
+
+                // Áreas Comuns
+                new GaleriaItem { Id = 4, Titulo = "Nossos Corredores", Imagem = "/images/Corredor1.webp", Categoria = "Áreas Comuns" },
+                new GaleriaItem { Id = 5, Titulo = "Acesso aos Quartos", Imagem = "/images/Corredor2.webp", Categoria = "Áreas Comuns" },
+                new GaleriaItem { Id = 6, Titulo = "Estacionamento Seguro para Motos", Imagem = "/images/GaragemMotos1.webp", Categoria = "Áreas Comuns" },
+
+                // Quartos
+                new GaleriaItem { Id = 7, Titulo = "Aconchego para Solteiros", Imagem = "/images/QuartoSolteiro.webp", Categoria = "Quartos" },
+                new GaleriaItem { Id = 8, Titulo = "Quarto Família Espaçoso", Imagem = "/images/QuartoFamilia1.webp", Categoria = "Quartos" },
+                new GaleriaItem { Id = 9, Titulo = "Hospedagem Familiar", Imagem = "/images/QuartoFamilia.webp", Categoria = "Quartos" },
+                new GaleriaItem { Id = 10, Titulo = "Quarto Casal Conforto", Imagem = "/images/QuartoCasalMais.webp", Categoria = "Quartos" },
+                new GaleriaItem { Id = 11, Titulo = "Banheiro Privativo e Limpo", Imagem = "/images/Banheiro.webp", Categoria = "Quartos" }
             };
         }
     }

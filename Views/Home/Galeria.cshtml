@@ -46,3 +46,17 @@
         </div>
     </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox-overlay" onclick="if(event.target===this)_lbClose()">
+    <button class="lightbox-close" onclick="_lbClose()">&#x2715;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="_lbNav(-1)">&#8592;</button>
+    <button class="lightbox-nav lightbox-next" onclick="_lbNav(1)">&#8594;</button>
+    <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="" />
+        <div class="lightbox-caption">
+            <span id="lightboxTitulo"></span>
+            <small id="lightboxCategoria"></small>
+        </div>
+    </div>
+</div>
