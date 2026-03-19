@@ -44,7 +44,7 @@ namespace DonaMarleneMVC.Controllers
                     Nome = "Quarto Solteiro",
                     Descricao = "Confortável e aconchegante, ideal para viajantes que buscam o melhor custo-benefício com toda a qualidade Dona Marlene.",
                     Capacidade = 1,
-                    Imagem = "/images/QuartoSolteiro.webp",
+                    Imagem = "/images/Quarto1.jpeg",
                     Comodidades = new List<string> { "Ar-condicionado", "TV a cabo", "Wi-Fi", "Frigobar", "Banheiro privativo" }
                 },
                 new Quarto
@@ -53,7 +53,7 @@ namespace DonaMarleneMVC.Controllers
                     Nome = "Quarto Casal+",
                     Descricao = "Espaçoso e bem equipado, perfeito para casais ou duplas que desejam conforto e privacidade durante a estadia.",
                     Capacidade = 2,
-                    Imagem = "/images/QuartoCasalMais.webp",
+                    Imagem = "/images/Quarto+++.jpeg",
                     Comodidades = new List<string> { "Ar-condicionado", "TV a cabo", "Wi-Fi", "Frigobar", "Banheiro privativo" }
                 },
                 new Quarto
@@ -62,7 +62,7 @@ namespace DonaMarleneMVC.Controllers
                     Nome = "Quarto Família",
                     Descricao = "Amplo e aconchegante, projetado para receber famílias com toda a estrutura necessária para uma estadia agradável.",
                     Capacidade = 4,
-                    Imagem = "/images/QuartoFamilia.webp",
+                    Imagem = "/images/QuartoFamilia1.webp",
                     Comodidades = new List<string> { "Ar-condicionado", "TV a cabo", "Wi-Fi", "Frigobar", "Banheiro privativo", "Camas extras" }
                 }
             };
@@ -76,18 +76,21 @@ namespace DonaMarleneMVC.Controllers
                 new GaleriaItem { Id = 1, Titulo = "Fim de Tarde em Codajás", Imagem = "/images/Por do sol.webp", Categoria = "Ambiente" },
                 new GaleriaItem { Id = 2, Titulo = "Fachada do Hotel Dona Marlene", Imagem = "/images/hotel_hero.webp", Categoria = "Ambiente" },
                 new GaleriaItem { Id = 3, Titulo = "Entrada Principal", Imagem = "/images/Frente.webp", Categoria = "Ambiente" },
+                new GaleriaItem { Id = 12, Titulo = "Vista do Porto", Imagem = "/images/HotelPorto.jpeg", Categoria = "Ambiente" },
 
                 // Áreas Comuns
                 new GaleriaItem { Id = 4, Titulo = "Nossos Corredores", Imagem = "/images/Corredor1.webp", Categoria = "Áreas Comuns" },
                 new GaleriaItem { Id = 5, Titulo = "Acesso aos Quartos", Imagem = "/images/Corredor2.webp", Categoria = "Áreas Comuns" },
                 new GaleriaItem { Id = 6, Titulo = "Estacionamento Seguro para Motos", Imagem = "/images/GaragemMotos1.webp", Categoria = "Áreas Comuns" },
+                new GaleriaItem { Id = 13, Titulo = "Corredor Térreo", Imagem = "/images/CorredorTerreo.jpeg", Categoria = "Áreas Comuns" },
+                new GaleriaItem { Id = 17, Titulo = "Garagem para Motos", Imagem = "/images/GaragemMotos.webp", Categoria = "Áreas Comuns" },
 
                 // Quartos
-                new GaleriaItem { Id = 7, Titulo = "Aconchego para Solteiros", Imagem = "/images/QuartoSolteiro.webp", Categoria = "Quartos" },
                 new GaleriaItem { Id = 8, Titulo = "Quarto Família Espaçoso", Imagem = "/images/QuartoFamilia1.webp", Categoria = "Quartos" },
-                new GaleriaItem { Id = 9, Titulo = "Hospedagem Familiar", Imagem = "/images/QuartoFamilia.webp", Categoria = "Quartos" },
-                new GaleriaItem { Id = 10, Titulo = "Quarto Casal Conforto", Imagem = "/images/QuartoCasalMais.webp", Categoria = "Quartos" },
-                new GaleriaItem { Id = 11, Titulo = "Banheiro Privativo e Limpo", Imagem = "/images/Banheiro.webp", Categoria = "Quartos" }
+                new GaleriaItem { Id = 11, Titulo = "Banheiro Privativo e Limpo", Imagem = "/images/Banheiro.jpeg", Categoria = "Quartos" },
+                new GaleriaItem { Id = 14, Titulo = "Quarto Casal", Imagem = "/images/QuartoCasal+++.jpeg", Categoria = "Quartos" },
+                new GaleriaItem { Id = 15, Titulo = "Quarto Casal Conforto", Imagem = "/images/Casal++.jpeg", Categoria = "Quartos" },
+                new GaleriaItem { Id = 16, Titulo = "Quarto Casal Aconchegante", Imagem = "/images/Casal+.jpeg", Categoria = "Quartos" }
             };
         }
     }
